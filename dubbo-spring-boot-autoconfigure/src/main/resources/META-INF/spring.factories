@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 org.scorpio.spring.boot.dubbo.autoconfigure.DubboAutoConfiguration,\
+org.scorpio.spring.boot.dubbo.autoconfigure.DubboProviderAutoConfiguration,\
 org.scorpio.spring.boot.dubbo.autoconfigure.DubboConsumerAutoConfiguration

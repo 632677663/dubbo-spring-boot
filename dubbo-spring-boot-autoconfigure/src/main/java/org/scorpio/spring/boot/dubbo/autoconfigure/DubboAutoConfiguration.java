@@ -1,6 +1,7 @@
 package org.scorpio.spring.boot.dubbo.autoconfigure;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,7 @@ import com.alibaba.dubbo.config.RegistryConfig;
  */
 @Configuration
 @EnableConfigurationProperties(DubboProperties.class)
+@ConditionalOnClass({ApplicationConfig.class,ProtocolConfig.class,RegistryConfig.class})
 public class DubboAutoConfiguration {
     @Autowired
     private DubboProperties properties;
